@@ -1,0 +1,169 @@
+@import 'base';
+
+// 头部固定区域
+@vw: 3.75vw;
+@pink: #fb7299;
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	// width: 100vw; 也可以
+	height: (84 / @vw);
+	background-color: #fff;
+	z-index: 1;
+
+	.top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: (44 / @vw);
+		padding: 0 (12 / @vw) 0 (18 / @vw);
+
+		.left {
+			width: (61 / @vw);
+			height: (28 / @vw);
+
+			i {
+				font-size: (28 / @vw);
+				color: @pink;
+			}
+
+		}
+
+		.right {
+			display: flex;
+			justify-content: space-between;
+			width: (166 / @vw);
+			height: (24 / @vw);
+
+			a {
+				height: (24 / @vw);
+			}
+
+			i {
+				font-size: (20 / @vw);
+				color: #CCCCCC;
+			}
+		}
+	}
+
+}
+
+.bottom {
+	display: flex;
+	justify-content: space-between;
+	height: (39 / @vw);
+	border-bottom: 1px solid #eee;
+
+	ul {
+		display: flex;
+		height: (39 / @vw);
+
+
+		li {
+			width: (60 /@vw);
+			line-height: (39 / @vw);
+			padding: 0 (16 / @vw);
+
+			&:first-child a {
+				color: @pink;
+			}
+
+			a {
+				display: block;
+				width: (28 /@vw);
+				height: (39 / @vw);
+				font-size: (14 / @vw);
+
+				&:hover {
+					border-bottom: 2px solid @pink;
+
+					// .v-switcher {
+					// 	border-bottom: 2px solid @pink;
+				}
+			}
+		}
+	}
+}
+
+.more {
+	width: (40 / @vw);
+	text-align: center;
+	line-height: (40 / @vw);
+	color: #CCCCCC;
+}
+
+
+.video_content {
+	display: flex;
+	padding: (84 / @vw) (5 / @vw) (5 / @vw);
+
+	.video_list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+
+		a {
+			width: 50%;
+			padding: (5 / @vw);
+
+			.pic {
+				position: relative;
+				width: (172 / @vw);
+				height: (97 / @vw);
+
+				img {
+					width: 100%;
+					height: 100%;
+				}
+
+				.count {
+					display: flex;
+					justify-content: space-between;
+					color: #fff;
+
+					p {
+						font-size: (12 / @vw);
+
+						i {
+							vertical-align: middle;
+							margin-right: (5 / @vw);
+						}
+
+						span {}
+					}
+
+				}
+			}
+
+			.txt {
+				width: (172 / @vw);
+				height: (32 / @vw);
+				font-size: (12 / @vw);
+				// 文字溢出显示省略代码
+				height: fit-content;
+				display: -webkit-box;
+				word-break: break-all;
+				-webkit-box-orient: vertical;
+				-webkit-box-pack: center;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				-webkit-line-clamp: 2;
+
+				margin-top: (5 / @vw);
+			}
+
+			.count {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: (172 / @vw);
+				height: (34 / @vw);
+				background: rgba(0, 0, 0, .3);
+				padding: (8 / @vw);
+			}
+		}
+	}
+}
